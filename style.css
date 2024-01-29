@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    padding-right: 30px;
+    color: darkblue;
+}
+
+header {
+    background-color:deepskyblue;   
+    display: flex;
+    min-height: 70px;
+    align-items:center;
+    padding: 8px;
+    justify-content:space-evenly;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.titulo {
+    justify-content: left;
+    font-size: 35px;
+}
+
+.apartados {
+    font-size:21px;
+    padding-right: 20px;
+    justify-content: baseline;
+    
+}
+
+.apartados a:hover {
+    color: yellow;
+    transition: 0.3s;
+}
+
+.flecha {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: .3s;
+    display: inline-block;
+    line-height: 0.1;
+}
+
+.apartados:hover .flecha {
+    transform: rotate(-180deg);
+}
+
+.submenu-ligas {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+
+}
+
+.apartados:hover .submenu-ligas {
+    display: block;
+}
+
+.submenu-ligas li a {
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+@media (max-width:700px) {
+    header {
+        flex-direction:column ;
+    }
+
+    .apartados {
+        padding: 10px 0px;
+    }
+}
