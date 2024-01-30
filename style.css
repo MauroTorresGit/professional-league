@@ -10,53 +10,68 @@ a {
 }
 
 header {
-    background-color:deepskyblue;   
+    background-color:white;   
     display: flex;
-    min-height: 70px;
-    align-items:center;
+    max-height: 50px;
     padding: 8px;
-    justify-content:space-evenly;
+    justify-content: center;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: right;
-
 }
 
 .logo img {
-    height: 50px;
+    height: 45px;
     margin-right: 10px;
 }
 
 .titulo {
     justify-content: left;
-    font-size: 35px;
+    font-size: 30px;
 }
 
-.apartados {
-    font-size:21px;
-    padding-right: 20px;
-    justify-content: baseline;
-    
+.menu {
+    max-width: 100%;
+    height: 50px;
+    margin: auto;
+    background-color: deepskyblue;
+    font-size: 20px;
+    margin-top: 60px;
+    position: relative;
+    top:-60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
 }
 
-.apartados a:hover {
+.menu a:hover {
     color: yellow;
     transition: 0.3s;
 }
 
-.flecha {
-    font-size: 10px;
-    margin-left: 4px;
-    transition: .3s;
-    display: inline-block;
-    line-height: 0.1;
+.apartado::after {
+    content:"";
+    height: 3px;
+    width: 0;
+    background-color: yellow;
+    display: block;
+    transition: all 300ms;
+    position: absolute;
+    top: 90%;
+    left:0;
 }
 
-.apartados:hover .flecha {
-    transform: rotate(-180deg);
+.apartado:hover::after {
+    width: 100%;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
 }
 
 .submenu-ligas {
@@ -64,23 +79,54 @@ header {
     display: none;
     list-style: none;
     width: 200px;
-    background-color: rgba(0, 0, 0, .5);
+    top: 51px;
+    left:-75px ;
+    background-color: white; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu > li {
+    position: relative;
+}
+
+.apartado:hover .submenu-ligas {
+    display: block;
 
 }
 
-.apartados:hover .submenu-ligas {
+
+.submenu-copas {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    top: 51px;
+    left:-75px ;
+    background-color: white; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.apartado:hover .submenu-copas {
     display: block;
 }
 
-.submenu-ligas li a {
-    display: block;
-    color: white;
-    padding: 15px 15px 15px 20px;
-    text-decoration: none;
+
+
+table {
+    position: relative;
+    left: 40%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .0);
+    border-top: 10px solid white;
 }
 
+td {
+    Aborder: 3px solid white;
+}
 
+tr {
 
+}
 
 
 
